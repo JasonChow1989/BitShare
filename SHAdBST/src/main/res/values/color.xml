@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="txtcoloc">#ffffff</color>
+    <color name="comptxt">#333333</color>
+    <color name="hint_log_pwd">#ededed</color>
+    <color name="title_color">#009944</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="items_textview_txt">#000000</color>
+    <color name="rb_bg">#F7F7F7</color>
+    <color name="sousuo_pressed">#C8C8C8</color>
+    <color name="items_textview_bg">#EDEDED</color>
+    <color name="title_color_pressed">#00D06C</color>
+    <color name="tabshowitems">#222222</color>
+    <color name="tab_showitems_checked">#333333</color>
+    <color name="bt_login_pressed">#32cd32</color>
+    <color name="bg_items_select">#F5F5F5</color>
+    <color name="bt_select">#39C08F</color>
+    <color name="bt_blue">#0099FF</color>
+    <color name="bt_blue_pressed">#0099B4</color>
+    <color name="bg_event">#EBECEE</color>
+    <color name="slibarColor">#adff2f</color>
+    <color name="txtcoloc1">#00ffffff</color>
+    <color name="none_color">#00000000</color>
+    <color name="bule_overlay">#660D92DD</color>
+    <color name="bt_yellow">#FFC000</color>
+    <color name="bt_yellow_pressed">#ffd700</color>
+    <color name="eventitems_bg">#666666</color>
+    <color name="livstview_item_bg">#dfdfdf</color>
+    <color name="content_color">#000000</color>
+    <color name="selector_background">#DAA520</color>
+    <color name="item_install_bg">#eeeeee</color>
+    <color name="cleartext_bg">#fafad2</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/txtcoloc"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titleback_eventchack"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:button="@null"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="事务处理-事务状态"
+            android:textColor="@color/txtcoloc" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="14" >
+
+            <RadioGroup
+                android:id="@+id/rg_eventchack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_san"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="3天"
+                    android:textColor="@drawable/util_txt_selector" />
+
+                <RadioButton
+                    android:id="@+id/rb_qi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="7天"
+                    android:textColor="@drawable/util_txt_selector" />
+
+                <RadioButton
+                    android:id="@+id/rb_sanshi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="30天"
+                    android:textColor="@drawable/util_txt_selector" />
+
+                <RadioButton
+                    android:id="@+id/rb_all"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@drawable/util_txt_selector" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/framell_evevtcheck"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" 
+            android:layout_marginTop="5dp"
+            >
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

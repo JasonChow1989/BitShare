@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:id="@+id/ll_eventcheck"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2" >
+
+                <ImageView
+                    android:id="@+id/tv_eventcheck_item_pic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="2.5" />
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_statetask"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="2.2"
+                    android:gravity="left|center_vertical"
+                    android:text="待处理"
+                    android:textColor="#454545" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="2"
+                    android:paddingRight="10dp"
+                    android:text="07-01 00:00"
+                    android:textColor="#3c495f"
+                    android:textSize="12dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_tasktype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="事务处理"
+                    android:textColor="#336598"
+                    android:textSize="15dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:gravity="right|center_vertical"
+                    android:text="事务发起人:"
+                    android:textColor="#3c495f"
+                    android:textSize="12dip" />
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_createname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="系统管理员"
+                    android:textColor="#3c495f"
+                    android:textSize="12dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="上海市普陀区真南路181号"
+                    android:textColor="#3c495f" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tv_eventcheck_item_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_eventcheck_item_taskcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="测试待处理"
+                    android:textColor="#3c495f" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,541 @@
+<manifest package="com.bashi_group_01.www.activity"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <permission
+        android:name="com.bashi_group_01.www.activity.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- 在SDCard中创建于删除文件的权限 -->
+    <!-- 往SDCard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络通信 -->
+    <!-- 获取设备信息 -->
+    <!-- 获取MAC地址 -->
+    <!-- 读写sdcard，storage等等 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.bashi_group_01.www.activity.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".LocationApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/log"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="32c176f53ff3861a1109dc2552e79c6a" >
+        </meta-data>
+
+        <service android:name="com.bashi_group_01.www.service.NotificationService" >
+        </service>
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="HkRplzGqU3Ghjdn23O6MjZB8" />
+
+        <activity
+            android:name=".Welcome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.RoadNameActivity"
+            android:label="@string/title_activity_road_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.LineselectActivity"
+            android:label="@string/title_activity_lineselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.StatpanselectActivity"
+            android:label="@string/title_activity_statpanselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.HoucheselectActivity"
+            android:label="@string/title_activity_houcheselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.ZhangpanselectActivity"
+            android:label="@string/title_activity_zhangpanselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.ShangingselectActivity"
+            android:label="@string/title_activity_shangingselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.EventchackActivity"
+            android:label="@string/title_activity_eventchack"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.EnmeryActivity"
+            android:label="@string/title_activity_enmery"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.MeetnotiyActivity"
+            android:label="@string/title_activity_meetnotiy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.FileMakeActivity"
+            android:label="@string/title_activity_file_make"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.XianluselectActivity"
+            android:label="@string/title_activity_xianluselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.ChepanselectActivity"
+            android:label="@string/title_activity_chepanselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.PinpanselectActivity"
+            android:label="@string/title_activity_pinpanselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.ChenumselectActivity"
+            android:label="@string/title_activity_chenumselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.OrderselectActivity"
+            android:label="@string/title_activity_orderselect"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".FirstWebViewsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stit"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.FeedonlogActivity"
+            android:label="@string/title_activity_feedonlog"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.HostroyActivity"
+            android:label="@string/title_activity_hostroy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.ComplnewsActivity"
+            android:label="@string/title_activity_complnews"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.CarnewsActivity"
+            android:label="@string/title_activity_carnews"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.MedianewsActivity"
+            android:label="@string/title_activity_medianews"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.HelpintoActivity"
+            android:label="@string/title_activity_helpinto"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name="com.bashi_group_01.www.childactivity.FfityChildActivity"
+            android:label="@string/title_activity_ffity_child"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".UtilStatZoneWebView"
+            android:label="@string/title_activity_util_stat_zone_web_view"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".UtilStatRoadLineWebView"
+            android:label="@string/title_activity_util_stat_road_line_web_view"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".UtilStatNumWebView"
+            android:label="@string/title_activity_util_stat_num_web_view"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".EventGetAndDoActivity"
+            android:label="@string/title_activity_event_get_and_do"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".EventLiveWorkingActivity"
+            android:label="@string/title_activity_event_live_working"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.photo.choosephotos.photoviewer.photoviewerinterface.ViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.photo.choosephotos.photoviewer.photoviewerinterface.ViewPagerDeleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.photo.choosephotos.photoviewer.photoviewerinterface.ViewPagerBitmapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.photo.choosephotos.photo.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.photo.choosephotos.photo.PhotoAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".FirstWebViewsHengActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ShareAppActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".EventCheckItemsChuLiActivity"
+            android:label="@string/title_activity_event_chack_items"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".CheckPicBigActivity"
+            android:label="@string/title_activity_check_pic_big"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".EventCheckItemsShenHeActivity"
+            android:label="@string/title_activity_event_check_items_shen_he"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".EventCheckItemsFinishActivity"
+            android:label="@string/title_activity_event_check_items_finish"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".EventCheckItemsUpdateSendActivity"
+            android:label="@string/title_activity_event_check_items_update_send"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".MeetingNotieItemActivitty"
+            android:label="@string/title_activity_meeting_notie_item_activitty"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".FaWenDetailActivity"
+            android:label="@string/title_activity_fa_wen_detail"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".EventHeTongDetailActivity"
+            android:label="@string/title_activity_event_he_tong_detail"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".MediaNewsItemActivity"
+            android:label="@string/title_activity_media_news_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".CareerNewsWebView"
+            android:label="@string/title_activity_career_news_web_view"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style" >
+        </activity>
+        <activity
+            android:name=".MsgScreenTaskProgress"
+            android:label="@string/title_activity_msg_screen_task_progress"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".MsgScreenTask"
+            android:label="@string/title_activity_msg_screen_task"
+            android:launchMode="singleTask"
+            android:theme="@style/Anim_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".FeedSendAgainActivity"
+            android:label="@string/title_activity_feed_send_again"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.bashi_group_01.www.activity" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.bashi_group_01.www.activity" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.bashi_group_01.www.activity" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.    用户自定义的广播接收器 -->
+        <receiver
+            android:name=".MyJPushReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.bashi_group_01.www.activity" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="490ecac9aec2c705ba01c8bc" />
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+    </application>
+
+</manifest>

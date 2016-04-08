@@ -1,0 +1,219 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/uploadPictureLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/rb_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titleback_eventstart"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:button="@null"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rb_items_eventstart"
+            android:textColor="@color/txtcoloc" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="8.8" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/tv_event_bg_select"
+                android:gravity="center"
+                android:text="交办事务"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/now_date"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="9.1"
+            android:background="#fcd46a"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="5dp"
+            android:textColor="#fefdd4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="8.8" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                android:background="@color/txtcoloc"
+                android:gravity="right|center_vertical"
+                android:text="位置:"
+                android:textColor="#000000"
+                android:textSize="15dip" />
+
+            <com.bashi_group_01.www.sliding.lib.ClearEditText
+                android:id="@+id/tv_location"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+                android:background="@color/cleartext_bg"
+                android:gravity="center_vertical|left"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:id="@+id/bt_loct_refrush"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                android:padding="10dp"
+                android:src="@drawable/refresh320" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/txtcoloc"
+                android:orientation="vertical" >
+
+                <com.bashi_group_01.www.sliding.lib.ClearEditText
+                    android:id="@+id/event_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.2"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请输入事务的描述信息"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#000000"
+                    android:textSize="15dip" />
+
+                <ListView
+                    android:id="@+id/recorder_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.3" >
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.35" >
+
+                    <ScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="vertical"
+                        android:scrollbars="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="14dp" >
+
+                            <com.photo.choosephotos.controller.GridViewWithoutScroll
+                                android:id="@+id/allPic"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:horizontalSpacing="5dp"
+                                android:numColumns="4"
+                                android:padding="5dp"
+                                android:stretchMode="columnWidth"
+                                android:verticalSpacing="5dp" >
+                            </com.photo.choosephotos.controller.GridViewWithoutScroll>
+                        </RelativeLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1.5" >
+
+                <com.bashi_group_01.www.Recorder.AudioRecorderButton
+                    android:id="@+id/id_bt_recorderbutton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/recorder_bg_shape"
+                    android:text="@string/str_recorder_normal" >
+                </com.bashi_group_01.www.Recorder.AudioRecorderButton>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_eventsend"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_weight="1.3"
+                android:background="@drawable/bt_sureselector_bg_selector"
+                android:text="发送"
+                android:textColor="@color/txtcoloc" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

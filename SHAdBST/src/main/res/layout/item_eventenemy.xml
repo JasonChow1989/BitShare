@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip" 
+    android:orientation="vertical"
+    android:background="@drawable/listview_item_bg_selector"
+    >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+        <TextView 
+            android:id="@+id/enemery_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="张必伟"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="18dip"
+            android:textColor="#000000"
+            />
+        
+        <TextView
+            android:id="@+id/enemery_tel" 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:text="68800"
+            android:paddingTop="6dp"
+            android:paddingRight="15dp"
+            android:textColor="#000000"
+            android:gravity="right|center_vertical"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        >
+        <TextView 
+            android:id="@+id/enemery_position"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="董事长"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="14dip"
+            />
+        
+        <TextView 
+            android:id="@+id/enemery_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:text="13901627557"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:textColor="#000000"
+            android:gravity="right|center_vertical"
+            />
+    </LinearLayout>
+</LinearLayout>

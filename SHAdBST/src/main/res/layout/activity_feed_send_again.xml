@@ -1,0 +1,243 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/uploadPictureLayout_feed_again"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/txtcoloc"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_titleback_feedlog_again"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rb_items_feedonlog"
+            android:textColor="@color/txtcoloc" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="5.3" >
+
+            <RadioGroup
+                android:id="@+id/rg_feedlog_again"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_feed_feedhu_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="养护"
+                    android:textColor="@drawable/util_txt_selector" />
+
+                <RadioButton
+                    android:id="@+id/rb_feed_fix_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/utilselect_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="维修"
+                    android:textColor="@drawable/util_txt_selector" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="3.9"
+                android:orientation="horizontal" >
+
+                <com.bashi_group_01.www.sliding.lib.ClearEditText
+                    android:id="@+id/edt_feedlog_num_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/cleartext_bg"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入设备编号"
+                    android:digits="0123456789"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/comptxt"
+                    android:textSize="14dip" />
+
+                <Button
+                    android:id="@+id/img_feedonlog_searchnum_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bt_sreach_selector"
+                    android:text="验证"
+                    android:layout_weight="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_feedlog_numll_again"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.8"
+                android:background="#FCEBD2"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" 
+                android:visibility="invisible"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_feedlog_numcode_again"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3"
+                        android:text="站点编号:"
+                        android:textColor="@color/comptxt" 
+                        android:gravity="left|center_vertical"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_feedlog_district_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/comptxt" />
+
+                <TextView
+                    android:id="@+id/tv_feedlog_linelist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/comptxt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.bashi_group_01.www.sliding.lib.ClearEditText
+                    android:id="@+id/event_content_feedsend_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请输入事务的描述信息"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#000000"
+                    android:textSize="15dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="vertical"
+                        android:scrollbars="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14dp" >
+
+                            <com.photo.choosephotos.controller.GridViewWithoutScroll
+                                android:id="@+id/allPic_feed_again"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:horizontalSpacing="5dp"
+                                android:numColumns="4"
+                                android:padding="10dp"
+                                android:stretchMode="columnWidth"
+                                android:verticalSpacing="5dp" >
+                            </com.photo.choosephotos.controller.GridViewWithoutScroll>
+                        </RelativeLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5.2" >
+
+            <Button
+                android:id="@+id/bt_eventsend_feed_again"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bt_sureselector_bg_selector"
+                android:text="发送"
+                android:textColor="@color/txtcoloc" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

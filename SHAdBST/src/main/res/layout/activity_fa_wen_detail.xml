@@ -1,0 +1,305 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/txtcoloc"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titleback_fawen_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:button="@null"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="收文管理"
+            android:textColor="@color/txtcoloc" />
+
+        <ImageView
+            android:id="@+id/img_backtohome_fawen_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:src="@drawable/home01" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1.8"
+        android:background="@drawable/metting_bg_shape"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="发文单位"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_danwei"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="收文编号"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_code"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="文号"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_wenhao"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="收文日期"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_date"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="文件标题"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="备注"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_beizhu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="关键字"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_guanjianzi"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="附件"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fawen_items_fujian"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_fawen_passflag"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="12"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/id_fawen_agree"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bt_meettingagreement_selector"
+            android:text="同意"
+            android:textColor="@color/title_color" />
+
+        <Button
+            android:id="@+id/id_fawen_disagree"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bt_meettingagreement_selector"
+            android:text="不同意"
+            android:textColor="@color/title_color" />
+    </LinearLayout>
+
+</LinearLayout>

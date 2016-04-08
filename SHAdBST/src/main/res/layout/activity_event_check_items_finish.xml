@@ -1,0 +1,436 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/txtcoloc"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titleback_eventchackitems_wancheng"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:button="@null"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="事务完成"
+            android:textColor="@color/txtcoloc" />
+
+        <ImageView
+            android:id="@+id/img_eventchackitems_backtohome_wancheng"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="4"
+            android:src="@drawable/home01" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tv_eventfinish_event"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/comptxt"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="交办事务"
+                    android:textColor="@color/txtcoloc"
+                    android:textSize="15dip" />
+
+                <ImageView
+                    android:id="@+id/img_eventwancheng_event_rightimg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:src="@drawable/droptop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_eventfinish_event"
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:background="@color/txtcoloc"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5.5"
+                    android:background="@color/rb_bg"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="已完成"
+                        android:textColor="@color/comptxt" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="事务发起人:"
+                            android:textColor="@color/comptxt"
+                            android:textSize="12dip" />
+
+                        <TextView
+                            android:id="@+id/eventcheckitems_wancheng_shiwu_createname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="系统管理员"
+                            android:textColor="@color/comptxt"
+                            android:textSize="12dip" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.2"
+                            android:textSize="12dip" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:text="发起时间: "
+                            android:textColor="@color/comptxt"
+                            android:textSize="12dip" />
+
+                        <TextView
+                            android:id="@+id/eventcheckitems_wancheng_shiwu_date"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:text="7月3日16:22"
+                            android:textColor="@color/comptxt"
+                            android:textSize="12dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="位置:"
+                            android:textColor="@color/comptxt" />
+
+                        <TextView
+                            android:id="@+id/eventcheckitems_wancheng_shiwu_location"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="上海市普陀区真南路150号"
+                            android:textColor="@color/comptxt" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="390dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="6" >
+
+                        <TextView
+                            android:id="@+id/eventcheckitems_wancheng_shiwu_content"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:text="sssssdadasda"
+                            android:textColor="@color/comptxt"
+                            android:textSize="17dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_evnetcheckitems_wancheng_pic1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/eventcheckitems_wancheng_shiwu_pic1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1.5" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_evnetcheckitems_wancheng_pic2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/eventcheckitems_wancheng_shiwu_pic2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1.5" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_evnetcheckitems_wancheng_pic3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/eventcheckitems_wancheng_shiwu_pic3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1.5" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/id_recorder_length_wancheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/dibg"
+                    android:visibility="invisible" >
+
+                    <View
+                        android:id="@+id/id_recorder_anim_wancheng"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical|left"
+                        android:background="@drawable/adj" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_eventfinish_hostroy"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/comptxt"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="事务处理历史记录"
+                    android:textColor="@color/txtcoloc"
+                    android:textSize="15dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_eventfinish_hostroy"
+                android:layout_width="fill_parent"
+                android:layout_height="540dp"
+                android:layout_weight="3"
+                android:background="#efefef"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="4.5"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:background="@color/txtcoloc"
+                            android:gravity="center"
+                            android:text="事务发起人"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_eventfinish_history_createperson"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/txtcoloc"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="系统管理员"
+                            android:textColor="@color/comptxt"
+                            android:textSize="15dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:background="@color/txtcoloc"
+                            android:gravity="center"
+                            android:text="事务处理人"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_eventfinish_history_reslperson"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/txtcoloc"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/comptxt"
+                            android:textSize="15dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:background="@color/txtcoloc"
+                            android:gravity="center"
+                            android:text="事务审批人"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_eventfinish_history_aduitperson"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/txtcoloc"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/comptxt"
+                            android:textSize="15dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ListView 
+                    android:id="@+id/listview_event_finish_histroy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    ></ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

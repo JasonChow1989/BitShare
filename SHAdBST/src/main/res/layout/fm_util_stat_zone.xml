@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff1f1f1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/llfristzone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_weight="4" >
+
+                    <TextView
+                        android:id="@+id/tv_addzone1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="区属"
+                        android:textSize="17dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+
+                        <ImageView
+                            android:id="@+id/del01"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/add" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llsedzone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llfristzone"
+                    android:layout_weight="4"
+                     >
+
+                    <TextView
+                        android:id="@+id/edt_addzone2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:hint="选择区属"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/del02"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone2"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llthridzone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llsedzone"
+                    android:layout_weight="4"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/edt_addzone3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择区属"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/del03"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone3"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfozone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llthridzone"
+                    android:layout_weight="4"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/edt_addzone4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择区属"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/del04"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone4"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfifzone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llfozone"
+                    android:layout_weight="4"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/edt_addzone5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择区属"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/del05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone5"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llsixzone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llfifzone"
+                    android:layout_weight="4"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/edt_addzone6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择区属"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/del06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone6"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfristroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llsixzone" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="路名"
+                        android:textSize="17dip" />
+
+                   <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+
+                        <ImageView
+                            android:id="@+id/imb_addroad1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/add" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llsedroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llfristroad" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/imb_addroad2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone2"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llthrdroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llsedroad"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/imb_addroad3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone3"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llforroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llthrdroad"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/imb_addroad4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone4"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfifroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llforroad"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/imb_addroad5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone5"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llsixroad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llfifroad"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:id="@+id/ed_addroad6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:id="@+id/imb_addroad6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@id/edt_addzone6"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/llsixroad"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiogroup_yuanjiao"
+                        android:gravity="center_vertical"
+                        android:hint="选择路名"
+                        android:paddingLeft="20dip"
+                        android:textSize="15dip" />
+
+                    <LinearLayout 
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="3"
+                        >
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:src="@drawable/reduce" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/bt_util_stat_sure"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="15dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_sureselector_bg_selector"
+                        android:text="@string/bt_sureselect"
+                        android:textColor="@color/txtcoloc" />
+
+                    <Button
+                        android:id="@+id/bt_util_stat_clear"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_marginBottom="15dip"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_clear_bg_selector"
+                        android:text="@string/bt_clearselect"
+                        android:textColor="@color/txtcoloc" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>

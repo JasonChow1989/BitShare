@@ -1,0 +1,321 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/txtcoloc"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="12"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titleback_meeting_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@drawable/img_title_bg_selector"
+            android:button="@null"
+            android:src="@drawable/img_title_left_selector" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="事务处理-会议通知"
+            android:textColor="@color/txtcoloc" />
+
+        <ImageView
+            android:id="@+id/img_backtohome_meeting_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:src="@drawable/home01" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1.8"
+        android:background="@drawable/metting_bg_shape"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="会议时间"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_date"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="2015-6-8"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="会议标题"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="会议层级"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_level"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="会议地点"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_location"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.9" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="参与人"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/meeting_items_parter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/metting_items_linecolor1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/comptxt"
+                    android:textSize="14dip" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="发布人"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_issusor"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="发布部门"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_issuesapratment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="发布日期"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_issuesdate"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="center"
+                android:text="备注"
+                android:textColor="#000000"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meeting_items_beizhu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/metting_items_linecolor"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/comptxt"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="12"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+
+</LinearLayout>
