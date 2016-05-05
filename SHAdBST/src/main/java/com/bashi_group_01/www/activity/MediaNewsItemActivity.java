@@ -29,7 +29,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 /**
- * ÔÚÏßÊÓÆµ²¥·ÅÀà;
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
  * @author share
  *
  */
@@ -41,18 +41,18 @@ public class MediaNewsItemActivity extends Activity {
 	private final static int VIDEO_CACHE_FINISH = 3;
 	private final static int VIDEO_UPDATE_SEEKBAR = 5;
 
-	private Button playBtn, backBtn; // ÓÃÓÚ¿ªÊ¼ºÍÔÝÍ£µÄ°´Å¥
-	private SurfaceView videoSurfaceView; // »æÍ¼ÈÝÆ÷¶ÔÏó£¬ÓÃÓÚ°ÑÊÓÆµÏÔÊ¾ÔÚÆÁÄ»ÉÏ
-	private String url; // ÊÓÆµ²¥·ÅµØÖ·
-	private MediaPlayer mediaPlayer; // ²¥·ÅÆ÷¿Ø¼þ
-	private int postSize = 0; // ±£´æÒÑ²¥ÊÓÆµ´óÐ¡
-	private SeekBar seekbar; // ½ø¶ÈÌõ¿Ø¼þ
-	private boolean flag = true; // ÓÃÓÚÅÐ¶ÏÊÓÆµÊÇ·ñÔÚ²¥·ÅÖÐ
+	private Button playBtn, backBtn; // ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Í£ï¿½Ä°ï¿½Å¥
+	private SurfaceView videoSurfaceView; // ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½Æµï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½
+	private String url; // ï¿½ï¿½Æµï¿½ï¿½ï¿½Åµï¿½Ö·
+	private MediaPlayer mediaPlayer; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½
+	private int postSize = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½Æµï¿½ï¿½Ð¡
+	private SeekBar seekbar; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½
+	private boolean flag = true; // ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Æµï¿½Ç·ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½
 	private RelativeLayout opLy;
-	private boolean display; // ÓÃÓÚÊÇ·ñÏÔÊ¾ÆäËû°´Å¥
+	private boolean display; // ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
 	private ProgressBar loadingVideoV;
 	private TextView cacheT;
-	private UpdateSeekBarR updateSeekBarR; // ¸üÐÂ½ø¶ÈÌõÓÃ
+	private UpdateSeekBarR updateSeekBarR; // ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	private long mediaLength = 0, readSize = 0;
 
@@ -60,52 +60,55 @@ public class MediaNewsItemActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);// È«ÆÁ
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // Ó¦ÓÃÔËÐÐÊ±£¬±£³ÖÆÁÄ»¸ßÁÁ£¬²»ËøÆÁ
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);// È«ï¿½ï¿½
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		Intent intent = getIntent();
 		String url1 = intent.getStringExtra("url");
 
-		url = "http://task.84000.com.cn:7070/news" + url1; // ÊÓÆµ²¥·ÅµØÖ·
+		url = "http://task.84000.com.cn:7070/news" + url1; // ï¿½ï¿½Æµï¿½ï¿½ï¿½Åµï¿½Ö·
 		// url
 		// =Environment.getExternalStorageDirectory().getAbsolutePath()+"/9533522808.f4v.mp4";
-		initVideoPlayer();// ³õÊ¼»¯Êý¾Ý
-		setPalyerListener();// °ó¶¨Ïà¹ØÊÂ¼þ
+
+		System.out.println("urlurlurlurlurlurlurlurl==="+url);
+
+		initVideoPlayer();// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		setPalyerListener();// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 	}
 
 	private void initVideoPlayer() {
-		mediaPlayer = new MediaPlayer(); // ´´½¨Ò»¸ö²¥·ÅÆ÷¶ÔÏó
-		updateSeekBarR = new UpdateSeekBarR(); // ´´½¨¸üÐÂ½ø¶ÈÌõ¶ÔÏó
+		mediaPlayer = new MediaPlayer(); // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		updateSeekBarR = new UpdateSeekBarR(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		setContentView(R.layout.main); // ¼ÓÔØ²¼¾ÖÎÄ¼þ
+		setContentView(R.layout.main); // ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
-		seekbar = (SeekBar) findViewById(R.id.seekBar);// ½ø¶ÈÌõ
+		seekbar = (SeekBar) findViewById(R.id.seekBar);// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		opLy = (RelativeLayout) findViewById(R.id.opLy);
 		loadingVideoV = (ProgressBar) findViewById(R.id.loadingVideo);
 		cacheT = (TextView) findViewById(R.id.cacheT);
 
 		backBtn = (Button) findViewById(R.id.backBtn);
 		playBtn = (Button) findViewById(R.id.playBtn);
-		playBtn.setEnabled(false); // ¸Õ½øÀ´£¬ÉèÖÃÆä²»¿Éµã»÷
+		playBtn.setEnabled(false); // ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä²»ï¿½Éµï¿½ï¿½
 
 		videoSurfaceView = (SurfaceView) findViewById(R.id.surfaceView);
 
 		videoSurfaceView.getHolder().setType(
-				SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS); // ²»»º³å
-		videoSurfaceView.getHolder().setKeepScreenOn(true); // ±£³ÖÆÁÄ»¸ßÁÁ
-		videoSurfaceView.getHolder().addCallback(new videoSurfaceView());// ÉèÖÃ¼àÌýÊÂ¼þ,´ÓÕâÀï¼àÌýsurface´´½¨Íê³É¿ªÊ¼²¥·ÅÊÓÆµ
+				SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		videoSurfaceView.getHolder().setKeepScreenOn(true); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½
+		videoSurfaceView.getHolder().addCallback(new videoSurfaceView());// ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½surfaceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ
 	}
 
-	// ÊÓÆµ²¥·ÅÊÓÍ¼»Øµ÷ÊÂ¼þ
-	private class videoSurfaceView implements Callback { // ÉÏÃæ°ó¶¨µÄ¼àÌýµÄÊÂ¼þ
+	// ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Øµï¿½ï¿½Â¼ï¿½
+	private class videoSurfaceView implements Callback { // ï¿½ï¿½ï¿½ï¿½ó¶¨µÄ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 		@Override
 		public void surfaceChanged(SurfaceHolder holder, int format, int width,
 				int height) {
 		}
 
 		@Override
-		public void surfaceCreated(SurfaceHolder holder) {// ´´½¨Íê³Éºóµ÷ÓÃ
-			// ²»ÊÇÍøÂçÊÓÆµ,Ö±½Ó²¥·Å
+		public void surfaceCreated(SurfaceHolder holder) {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½ï¿½
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ,Ö±ï¿½Ó²ï¿½ï¿½ï¿½
 			if (URLUtil.isNetworkUrl(url)) {
 				try {
 					mHandler.sendEmptyMessage(VIDEO_STATE_BEGIN);
@@ -117,14 +120,14 @@ public class MediaNewsItemActivity extends Activity {
 				File videoFile = new File(url);
 				if (videoFile.exists()) {
 					readSize = mediaLength = videoFile.length();
-					System.out.println("ÕâÊÇ±¾µØÊÓÆµ,Ö±½Ó²¥·Å!");
+					System.out.println("ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½ï¿½Æµ,Ö±ï¿½Ó²ï¿½ï¿½ï¿½!");
 					mHandler.sendEmptyMessage(VIDEO_STATE_BEGIN);
 				}
 			}
 		}
 
 		@Override
-		public void surfaceDestroyed(SurfaceHolder holder) { // activityµ÷ÓÃ¹ýpause·½·¨£¬±£´æµ±Ç°²¥·ÅÎ»ÖÃ
+		public void surfaceDestroyed(SurfaceHolder holder) { // activityï¿½ï¿½ï¿½Ã¹ï¿½pauseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æµ±Ç°ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 			if (mediaPlayer != null && mediaPlayer.isPlaying()) {
 				postSize = mediaPlayer.getCurrentPosition();
 				mediaPlayer.stop();
@@ -134,7 +137,7 @@ public class MediaNewsItemActivity extends Activity {
 		}
 	}
 
-	// ²¥·ÅÊÓÆµµÄÏß³Ì
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ß³ï¿½
 	class PlayMovieT extends Thread {
 		int post = 0;
 
@@ -145,11 +148,11 @@ public class MediaNewsItemActivity extends Activity {
 		@Override
 		public void run() {
 			try {
-				mediaPlayer.reset(); // »Ø¸´²¥·ÅÆ÷Ä¬ÈÏ
-				mediaPlayer.setDataSource(url); // ÉèÖÃ²¥·ÅÂ·¾¶
-				mediaPlayer.setDisplay(videoSurfaceView.getHolder()); // °ÑÊÓÆµÏÔÊ¾ÔÚSurfaceViewÉÏ
-				mediaPlayer.setOnPreparedListener(new videoPreparedL(post)); // ÉèÖÃ¼àÌýÊÂ¼þ
-				mediaPlayer.prepare(); // ×¼±¸²¥·Å
+				mediaPlayer.reset(); // ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½
+				mediaPlayer.setDataSource(url); // ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+				mediaPlayer.setDisplay(videoSurfaceView.getHolder()); // ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½Ê¾ï¿½ï¿½SurfaceViewï¿½ï¿½
+				mediaPlayer.setOnPreparedListener(new videoPreparedL(post)); // ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+				mediaPlayer.prepare(); // ×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			} catch (Exception e) {
 				mHandler.sendEmptyMessage(VIDEO_FILE_ERROR);
 			}
@@ -157,7 +160,7 @@ public class MediaNewsItemActivity extends Activity {
 		}
 	}
 
-	// ÊÓÆµ²¥·ÅÊÓÍ¼×¼±¸ÊÂ¼þ¼àÌýÆ÷
+	// ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼×¼ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	class videoPreparedL implements OnPreparedListener {
 		int postSize;
 
@@ -166,43 +169,43 @@ public class MediaNewsItemActivity extends Activity {
 		}
 
 		@Override
-		public void onPrepared(MediaPlayer mp) {// ×¼±¸Íê³É
-			loadingVideoV.setVisibility(View.GONE); // ×¼±¸Íê³Éºó£¬Òþ²Ø¿Ø¼þ
+		public void onPrepared(MediaPlayer mp) {// ×¼ï¿½ï¿½ï¿½ï¿½ï¿½
+			loadingVideoV.setVisibility(View.GONE); // ×¼ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½ï¿½Ø¿Ø¼ï¿½
 			backBtn.setVisibility(View.GONE);
 			opLy.setVisibility(View.GONE);
 
 			display = false;
 			if (mediaPlayer != null) {
-				mediaPlayer.start(); // ¿ªÊ¼²¥·ÅÊÓÆµ
+				mediaPlayer.start(); // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ
 			} else {
 				return;
 			}
-			if (postSize > 0) { // ËµÃ÷ÖÐÍ¾Í£Ö¹¹ý£¨activityµ÷ÓÃ¹ýpause·½·¨£¬²»ÊÇÓÃ»§µã»÷Í£Ö¹°´Å¥£©£¬Ìøµ½Í£Ö¹Ê±ºòÎ»ÖÃ¿ªÊ¼²¥·Å
-				mediaPlayer.seekTo(postSize); // Ìøµ½postSize´óÐ¡Î»ÖÃ´¦½øÐÐ²¥·Å
+			if (postSize > 0) { // Ëµï¿½ï¿½ï¿½ï¿½Í¾Í£Ö¹ï¿½ï¿½ï¿½ï¿½activityï¿½ï¿½ï¿½Ã¹ï¿½pauseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹Ê±ï¿½ï¿½Î»ï¿½Ã¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+				mediaPlayer.seekTo(postSize); // ï¿½ï¿½ï¿½ï¿½postSizeï¿½ï¿½Ð¡Î»ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½
 			}
-			new Thread(updateSeekBarR).start(); // Æô¶¯Ïß³Ì£¬¸üÐÂ½ø¶ÈÌõ
+			new Thread(updateSeekBarR).start(); // ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 
-	// ÉèÖÃ²Ù×÷¼àÌýÆ÷
+	// ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void setPalyerListener() {
 		mediaPlayer
-				.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {// »º³åÈ¥¸üÐÂ
+				.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {// ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½
 					@Override
 					public void onBufferingUpdate(MediaPlayer mp, int percent) {
 					}
 				});
 
 		mediaPlayer
-				.setOnCompletionListener(new MediaPlayer.OnCompletionListener() { // ÊÓÆµ²¥·ÅÍê³É
+				.setOnCompletionListener(new MediaPlayer.OnCompletionListener() { // ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					@Override
 					public void onCompletion(MediaPlayer mp) {
 						flag = false;
 						playBtn.setBackgroundResource(R.drawable.btn_play);
 					}
 				});
-		// Èç¹ûÊÓÆµÔÚ²¥·Å£¬Ôòµ÷ÓÃmediaPlayer.pause();£¬Í£Ö¹²¥·ÅÊÓÆµ£¬·´Ö®£¬mediaPlayer.start()
-		// £¬Í¬Ê±»»°´Å¥±³¾°
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½Ú²ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mediaPlayer.pause();ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½mediaPlayer.start()
+		// ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 		playBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -224,7 +227,7 @@ public class MediaNewsItemActivity extends Activity {
 			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
 				int value = seekbar.getProgress() * mediaPlayer.getDuration()
-						/ seekbar.getMax(); // ¼ÆËã½ø¶ÈÌõÐèÒªÇ°½øµÄÎ»ÖÃÊý¾Ý´óÐ¡
+						/ seekbar.getMax(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÇ°ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ý´ï¿½Ð¡
 				mediaPlayer.seekTo(value);
 			}
 
@@ -237,7 +240,7 @@ public class MediaNewsItemActivity extends Activity {
 					boolean fromUser) {
 			}
 		});
-		// µã»÷ÆÁÄ»£¬ÇÐ»»¿Ø¼þµÄÏÔÊ¾£¬ÏÔÊ¾ÔòÓ¦²Ø£¬Òþ²Ø£¬ÔòÏÔÊ¾
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½Ð»ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ó¦ï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
 		videoSurfaceView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -250,7 +253,7 @@ public class MediaNewsItemActivity extends Activity {
 					opLy.setVisibility(View.VISIBLE);
 					videoSurfaceView.setVisibility(View.VISIBLE);
 
-					// ÉèÖÃ²¥·ÅÎªÈ«ÆÁ
+					// ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ÎªÈ«ï¿½ï¿½
 					/*
 					 * ViewGroup.LayoutParams lp =
 					 * videoSurfaceView.getLayoutParams(); lp.height =
@@ -280,34 +283,34 @@ public class MediaNewsItemActivity extends Activity {
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case NETWORK_PARSE_ERROR:// ´íÎóÐÅÏ¢
-				Toast.makeText(getApplicationContext(), "ÍøÂçÁ¬½Ó´íÎó,²»ÄÜÍê³É²¥·Å!",
+			case NETWORK_PARSE_ERROR:// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+				Toast.makeText(getApplicationContext(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó´ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½!",
 						Toast.LENGTH_LONG).show();
 				loadingVideoV.setVisibility(View.GONE);
 				break;
-			case VIDEO_FILE_ERROR:// ´íÎóÐÅÏ¢
-				Toast.makeText(getApplicationContext(), "ÊÓÆµÎÄ¼þ´íÎó,²»ÄÜÍê³É²¥·Å!",
+			case VIDEO_FILE_ERROR:// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+				Toast.makeText(getApplicationContext(), "ï¿½ï¿½Æµï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½!",
 						Toast.LENGTH_LONG).show();
 				loadingVideoV.setVisibility(View.GONE);
 				break;
-			case VIDEO_STATE_BEGIN:// ¿ªÊ¼²¥·ÅÊÓÆµ
+			case VIDEO_STATE_BEGIN:// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ
 				playMediaMethod();
 				playBtn.setEnabled(true);
 				playBtn.setBackgroundResource(R.drawable.btn_pause);
 				break;
-			case VIDEO_CACHE_FINISH:// ÊÓÆµ»º´æÍê³É,Ê¹ÓÃ±¾µØÎÄ¼þ²¥·Å
+			case VIDEO_CACHE_FINISH:// ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ê¹ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 				Toast.makeText(getApplicationContext(),
-						"ÊÓÆµÒÑ¾­»º´æÍê±Ï,Îª±£Ö¤²¥·ÅµÄÁ÷³©ÐÔ,ÕýÔÚÇÐ»»³É±¾µØÎÄ¼þ²¥·Å!", Toast.LENGTH_LONG)
+						"ï¿½ï¿½Æµï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Îªï¿½ï¿½Ö¤ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½!", Toast.LENGTH_LONG)
 						.show();
 				postSize = mediaPlayer.getCurrentPosition();
 				playMediaMethod();
 				break;
-			case VIDEO_UPDATE_SEEKBAR:// ¸üÐÂ½ø¶ÈÌõ
+			case VIDEO_UPDATE_SEEKBAR:// ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (mediaPlayer == null) {
 					flag = false;
 				} else {
 					double cachepercent = readSize * 100.00 / mediaLength * 1.0;
-					String s = String.format("Î´»º´æ", cachepercent);
+					String s = String.format("Î´ï¿½ï¿½ï¿½ï¿½", cachepercent);
 
 					if (mediaPlayer.isPlaying()) {
 						flag = true;
@@ -324,10 +327,10 @@ public class MediaNewsItemActivity extends Activity {
 						int minute = i / 60 % 60;
 						int second = i % 60;
 
-						s += String.format(" µ±Ç°²¥·Å:%02d:%02d:%02d [%.2f%%]",
+						s += String.format(" ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½:%02d:%02d:%02d [%.2f%%]",
 								hour, minute, second, playpercent);
 					} else {
-						s += " ÊÓÆµµ±Ç°Î´²¥·Å!";
+						s += " ï¿½ï¿½Æµï¿½ï¿½Ç°Î´ï¿½ï¿½ï¿½ï¿½!";
 					}
 					cacheT.setText(s);
 				}
@@ -338,10 +341,10 @@ public class MediaNewsItemActivity extends Activity {
 		};
 	};
 
-	// ²¥·ÅÊÓÆµµÄ·½·¨
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½Ä·ï¿½ï¿½ï¿½
 	private void playMediaMethod() {
-		if (postSize > 0 && url != null) { // ËµÃ÷£¬Í£Ö¹¹ý activityµ÷ÓÃ¹ýpause·½·¨£¬Ìøµ½Í£Ö¹Î»ÖÃ²¥·Å
-			new PlayMovieT(postSize).start();// ´ÓpostSizeÎ»ÖÃ¿ªÊ¼·Å
+		if (postSize > 0 && url != null) { // Ëµï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ activityï¿½ï¿½ï¿½Ã¹ï¿½pauseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹Î»ï¿½Ã²ï¿½ï¿½ï¿½
+			new PlayMovieT(postSize).start();// ï¿½ï¿½postSizeÎ»ï¿½Ã¿ï¿½Ê¼ï¿½ï¿½
 			flag = true;
 			int sMax = seekbar.getMax();
 			int mMax = mediaPlayer.getDuration();
@@ -349,11 +352,11 @@ public class MediaNewsItemActivity extends Activity {
 
 			loadingVideoV.setVisibility(View.GONE);
 		} else {
-			new PlayMovieT(0).start();// ±íÃ÷ÊÇµÚÒ»´Î¿ªÊ¼²¥·Å
+			new PlayMovieT(0).start();// ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½Ò»ï¿½Î¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 
-	// Ã¿¸ô1Ãë¸üÐÂÒ»ÏÂ½ø¶ÈÌõÏß³Ì
+	// Ã¿ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
 	class UpdateSeekBarR implements Runnable {
 		@Override
 		public void run() {
@@ -365,7 +368,7 @@ public class MediaNewsItemActivity extends Activity {
 	}
 
 	@Override
-	protected void onDestroy() { // activityÏú»Ùºó£¬ÊÍ·Å×ÊÔ´
+	protected void onDestroy() { // activityï¿½ï¿½ï¿½Ùºï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô´
 		super.onDestroy();
 		if (mediaPlayer != null) {
 			mediaPlayer.stop();
@@ -375,11 +378,11 @@ public class MediaNewsItemActivity extends Activity {
 		System.gc();
 	}
 
-/*	// ÔÚÏß²¥·ÅÊ±ºóÌ¨»º´æÎÄ¼þ,·½±ãÏÂ´ÎÖ±½Ó²¥·Å
+/*	// ï¿½ï¿½ï¿½ß²ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½Ö±ï¿½Ó²ï¿½ï¿½ï¿½
 	class CacheNetFileR implements Runnable {
 		@Override
 		public void run() {
-			System.out.println("------------¿ªÊ¼»º´æÊÓÆµÁË!");
+			System.out.println("------------ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½!");
 			FileOutputStream out = null;
 			InputStream is = null;
 			try {
@@ -393,11 +396,11 @@ public class MediaNewsItemActivity extends Activity {
 				boolean isNeedCache = false;
 				if (cacheFile.exists()) {
 					readSize = mediaLength = cacheFile.length();
-					// ÏÈ½²ÊôÐÔÉèÖÃºÃ,²»È»getContentLengthÖ®ºóÒÑ¾­´ò¿ªÁ¬½ÓÁË,²»ÄÜÔÙÉèÖÃÁË
+					// ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½,ï¿½ï¿½È»getContentLengthÖ®ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					httpConnection.setRequestProperty("User-Agent", "NetFox");
 					httpConnection.setRequestProperty("RANGE", "bytes="
-							+ readSize + "-");// ´Ó¶Ïµã´¦ÇëÇó¶ÁÈ¡ÎÄ¼þ
-					if (httpConnection.getContentLength() == readSize) {// ÊÓÆµÒÑ¾­³É¹¦»º´æÍê³É
+							+ readSize + "-");// ï¿½Ó¶Ïµã´¦ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½Ä¼ï¿½
+					if (httpConnection.getContentLength() == readSize) {// ï¿½ï¿½Æµï¿½Ñ¾ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						url = cacheUrl;
 						isNeedCache = false;
 					} else {
@@ -408,14 +411,14 @@ public class MediaNewsItemActivity extends Activity {
 					cacheFile.createNewFile();
 					isNeedCache = true;
 				}
-				mHandler.sendEmptyMessage(VIDEO_STATE_BEGIN);// ¿ªÊ¼²¥·ÅÊÓÆµ
-				if (isNeedCache) {// ÐèÒª»º´æÊÓÆµ
+				mHandler.sendEmptyMessage(VIDEO_STATE_BEGIN);// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ
+				if (isNeedCache) {// ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµ
 					out = new FileOutputStream(cacheFile, true);
 
 					is = httpConnection.getInputStream();
 					mediaLength = httpConnection.getContentLength();
 					if (-1 == mediaLength) {
-						System.out.println("-------------ÊÓÆµÎÄ¼þ»º´æÊ§°Ü,²»ÄÜ³É¹¦»ñÈ¡ÎÄ¼þ´óÐ¡!");
+						System.out.println("-------------ï¿½ï¿½Æµï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½,ï¿½ï¿½ï¿½Ü³É¹ï¿½ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½Ð¡!");
 						return;
 					}
 					mediaLength += readSize;
@@ -423,8 +426,8 @@ public class MediaNewsItemActivity extends Activity {
 					byte buf[] = new byte[4 * 1024];
 					int size = 0;
 
-					while ((size = is.read(buf)) != -1) {// »º´æÎÄ¼þ
-						System.out.println("--------------»º´æÎÄ¼þ²¿·Ö:" + size);
+					while ((size = is.read(buf)) != -1) {// ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+						System.out.println("--------------ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½:" + size);
 						try {
 							out.write(buf, 0, size);
 							readSize += size;
@@ -432,8 +435,8 @@ public class MediaNewsItemActivity extends Activity {
 							e.printStackTrace();
 						}
 					}
-					url = cacheUrl;// ½«urlÌæ»»³É±¾µØ
-					mHandler.sendEmptyMessage(VIDEO_CACHE_FINISH);// ÊÓÆµ»º´æ½áÊø,½«µ±Ç°ÊÓÆµÇÐ»»³É²¥·Å±¾µØµÄÎÄ¼þ
+					url = cacheUrl;// ï¿½ï¿½urlï¿½æ»»ï¿½É±ï¿½ï¿½ï¿½
+					mHandler.sendEmptyMessage(VIDEO_CACHE_FINISH);// ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Æµï¿½Ð»ï¿½ï¿½É²ï¿½ï¿½Å±ï¿½ï¿½Øµï¿½ï¿½Ä¼ï¿½
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
